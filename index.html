@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Millennial Family Finance | Smart Money Tools for Modern Families</title>
+<meta name="description" content="Free financial calculators for millennial families including 50/30/20 budget calculator, mortgage calculator, amortization schedule generator, and investment calculator.">
+<meta name="keywords" content="millennial finance, 50 30 20 calculator, mortgage calculator, amortization schedule, investment calculator, family budgeting">
+<link rel="canonical" href="https://millennialfamilyfinance.com/">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="top-left-book">
+        <a href="#" target="_blank">
+            <img src="assets/book-cover.png" alt="Thrive Book Cover">
+        </a>
+    </div>
+    <h1>Millennial Family Finance</h1>
+    <p>Smart Financial Tools for Modern Families</p>
+</header>
+
+<nav>
+    <a href="#budget">50/30/20 Calculator</a>
+    <a href="#mortgage">Mortgage Calculator</a>
+    <a href="#investment">Investment Calculator</a>
+    <a href="#resources">Financial Apps</a>
+</nav>
+
+<section id="budget">
+<h2>50 / 30 / 20 Budget Calculator</h2>
+<input type="number" id="income" placeholder="Monthly Income">
+<button onclick="calculateBudget()">Calculate</button>
+<div id="budgetResults"></div>
+</section>
+
+<section id="mortgage">
+<h2>Mortgage & Amortization Calculator</h2>
+<input type="number" id="loanAmount" placeholder="Loan Amount">
+<input type="number" id="interestRate" placeholder="Interest Rate (%)">
+<input type="number" id="loanYears" placeholder="Loan Term (Years)">
+<button onclick="calculateMortgage()">Calculate</button>
+<div id="mortgageResults"></div>
+<div id="amortizationTable"></div>
+</section>
+
+<section id="investment">
+<h2>Investment Future Value Calculator</h2>
+<input type="number" id="investmentAmount" placeholder="Initial Investment">
+<input type="number" id="annualReturn" placeholder="Annual Return (%)">
+<input type="number" id="years" placeholder="Years">
+<button onclick="calculateInvestment()">Calculate</button>
+<div id="investmentResults"></div>
+</section>
+
+<section id="resources">
+<h2>Recommended Financial Tools</h2>
+<ul>
+<li><a href="https://mint.intuit.com/" target="_blank">Mint</a></li>
+<li><a href="https://www.everydollar.com/" target="_blank">EveryDollar</a></li>
+<li><a href="https://www.sofi.com/relay/" target="_blank">SoFi Relay</a></li>
+<li><a href="https://www.rocketmoney.com/" target="_blank">Rocket Money</a></li>
+<li><a href="https://www.empower.com/" target="_blank">Empower</a></li>
+<li><a href="https://www.gnucash.org/" target="_blank">GnuCash</a></li>
+</ul>
+</section>
+
+<footer>
+<p>© 2026 Millennial Family Finance</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
