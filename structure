@@ -1,0 +1,10 @@
+millennialfamilyfinance/
+│
+├── index.html
+├── style.css
+├── script.js
+├── sitemap.xml
+├── robots.txt
+├── vercel.json
+└── assets/
+    └── book-cover.png (your Thrive thumbnail)
