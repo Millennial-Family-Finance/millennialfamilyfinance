@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Millennial Family Finance | Smart Money Tools for Modern Families</title>
-  <meta name="description" content="Free financial calculators for millennial families including 50/30/20 budget calculator, mortgage calculator, amortization schedule generator, and investment calculator.">
-  <link rel="canonical" href="https://millennialfamilyfinance.com/">
+  <meta name="description" content="Free financial calculators for millennial families including budget, mortgage amortization, and investment calculators.">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -32,11 +31,15 @@
 
 <section id="mortgage">
   <h2>Mortgage & Amortization Calculator</h2>
+
   <input type="number" id="loanAmount" placeholder="Loan Amount">
   <input type="number" id="interestRate" placeholder="Interest Rate (%)">
   <input type="number" id="loanYears" placeholder="Loan Term (Years)">
+
   <button onclick="calculateMortgage()">Calculate</button>
+
   <div id="mortgageResults"></div>
+  <div id="amortizationTable"></div>
 </section>
 
 <section id="investment">
@@ -50,9 +53,6 @@
 </section>
 
 <footer>
-  <a href="https://www.amazon.com/dp/B0GQC32GXP" target="_blank">
-    <img src="assets/book-cover.png" alt="Thrive Book Cover" width="120">
-  </a>
   <p>© 2026 Millennial Family Finance</p>
 </footer>
 
