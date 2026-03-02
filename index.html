@@ -1,244 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Millennial Family Finance | Smart Money Tools for Modern Families</title>
-<meta name="description" content="Free financial calculators for millennial families including 50/30/20 budget calculator, mortgage calculator, amortization schedule generator, and investment calculator.">
-<meta name="keywords" content="millennial finance, 50 30 20 calculator, mortgage calculator, amortization schedule, investment calculator, family budgeting">
-<link rel="canonical" href="https://millennialfamilyfinance.com/">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Millennial Family Finance | Smart Money Tools for Modern Families</title>
+  <meta name="description" content="Free financial calculators for millennial families including 50/30/20 budget calculator, mortgage calculator, amortization schedule generator, and investment calculator.">
+  <link rel="canonical" href="https://millennialfamilyfinance.com/">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-    
-    <h1>Millennial Family Finance</h1>
-    <p>Smart Financial Tools for Modern Families</p>
+  <h1>Millennial Family Finance</h1>
+  <p>Smart Financial Tools for Modern Families</p>
 </header>
 
 <nav>
-    <a href="#budget">50/30/20 Calculator</a>
-    <a href="#mortgage">Mortgage Calculator</a>
-    <a href="#investment">Investment Calculator</a>
-    <a href="#resources">Financial Apps</a>
+  <a href="#budget">50/30/20 Calculator</a>
+  <a href="#mortgage">Mortgage Calculator</a>
+  <a href="#investment">Investment Calculator</a>
+  <a href="about.html">About</a>
 </nav>
 
 <section id="budget">
-<h2>50 / 30 / 20 Budget Calculator</h2>
-<p>Pay Yourself First</p>
-<input type="number" id="income" placeholder="Monthly Income">
-<button onclick="calculateBudget()">Calculate</button>
-<div id="budgetResults"></div>
+  <h2>50 / 30 / 20 Budget Calculator</h2>
+  <input type="number" id="income" placeholder="Monthly Income">
+  <button onclick="calculateBudget()">Calculate</button>
+  <div id="budgetResults"></div>
 </section>
 
 <section id="mortgage">
-<h2>Mortgage & Amortization Calculator</h2>
-<p>Advance Pay Next Months Principle - Payoff Loans in Half the Time</p>
-<input type="number" id="loanAmount" placeholder="Loan Amount">
-<input type="number" id="interestRate" placeholder="Interest Rate (%)">
-<input type="number" id="loanYears" placeholder="Loan Term (Years)">
-<button onclick="calculateMortgage()">Calculate</button>
-<div id="mortgageResults"></div>
-<div id="amortizationTable"></div>
+  <h2>Mortgage & Amortization Calculator</h2>
+  <input type="number" id="loanAmount" placeholder="Loan Amount">
+  <input type="number" id="interestRate" placeholder="Interest Rate (%)">
+  <input type="number" id="loanYears" placeholder="Loan Term (Years)">
+  <button onclick="calculateMortgage()">Calculate</button>
+  <div id="mortgageResults"></div>
 </section>
 
 <section id="investment">
   <h2>Investment Future Value Calculator</h2>
-  <p>See How Your Money Can Grow With Time — Start Early</p>
-
   <input type="number" id="investmentAmount" placeholder="Initial Investment ($)">
   <input type="number" id="monthlyContribution" placeholder="Monthly Contribution ($)">
   <input type="number" id="annualReturn" placeholder="Annual Return (%)">
   <input type="number" id="years" placeholder="Years">
-
   <button onclick="calculateInvestment()">Calculate</button>
-
   <div id="investmentResults"></div>
 </section>
 
-<section id="resources">
-<h2>Recommended Financial Tools</h2>
-<p>Examples of Useful Tools</p>
-<ul>
-<li><a href="https://mint.intuit.com/" target="_blank">Mint</a></li>
-<li><a href="https://www.everydollar.com/" target="_blank">EveryDollar</a></li>
-<li><a href="https://www.rocketmoney.com/" target="_blank">Rocket Money</a></li>
-<li><a href="https://www.empower.com/" target="_blank">Empower</a></li>
-<li><a href="https://www.bankrate.com/banking/cds/cd-rates/" target="_blank">CD Rates</a></li>
-<li><a href="https://www.bankrate.com/mortgages/mortgage-rates/" target="_blank">Mortgage Rates</a></li>
-<li><a href="https://www.reventure.app//" target="_blank">Reventure Housing Market Tool</a></li>
-<li><a href="https://www.nerdwallet.com/" target="_blank">Credit Cards/ Insurance/ More</a></li>
-<li><a href="https://www.google.com/finance/beta?hl=en" target="_blank">Stock Market Tracker</a></li>
-<li><a href="https://www.financecharts.com/screener/undervalued" target="_blank">Stock Analysis Free Signup</a></li>
-<li><a href="https://www.capitoltrades.com/trades" target="_blank">Stocks Politicians are Buying</a></li>
-    
-</ul>
-<p>Reminder: Investing Comes With Risk, Make Sure You Understand How You Can Lose Money</p>
-</section>
-             <p>     CLICK ON OUR BOOK BELOW - GET A COPY</p>
-             <p>     Thrive: Financial Strategies for Modern Millennial Families</p>
-   
 <footer>
-    <div class="bottom-left-thumbnail">
-        <a href="https://www.amazon.com/dp/B0GQC32GXP" target="_blank">
-            <img src="assets/book-cover.png" alt="Thrive Book Cover">
-<p>© 2026 Millennial Family Finance</p>
+  <a href="https://www.amazon.com/dp/B0GQC32GXP" target="_blank">
+    <img src="assets/book-cover.png" alt="Thrive Book Cover" width="120">
+  </a>
+  <p>© 2026 Millennial Family Finance</p>
 </footer>
 
 <script src="script.js"></script>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About | Millennial Family Finance</title>
-  <meta name="description" content="Millennial Family Finance helps modern families master budgeting, debt, investing, and long-term financial stability without sacrificing quality of life.">
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
-      line-height: 1.7;
-      margin: 0;
-      padding: 0;
-      background: #f9fafb;
-      color: #1f2937;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
-    h1, h2 {
-      color: #111827;
-      line-height: 1.3;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    h2 {
-      margin-top: 2.5rem;
-      font-size: 1.6rem;
-    }
-    p {
-      margin-bottom: 1.25rem;
-      font-size: 1.05rem;
-    }
-    .highlight {
-      background: #e0f2fe;
-      padding: 1.5rem;
-      border-left: 5px solid #0284c7;
-      margin: 2rem 0;
-    }
-    .values {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .value-box {
-      background: #ffffff;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    }
-    footer {
-      margin-top: 4rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #6b7280;
-    }
-  </style>
-</head>
-
-<body>
-  <main class="container">
-    <h1>About Millennial Family Finance</h1>
-
-    <p>
-      Millennial Family Finance exists to help modern families take control of their money
-      without sacrificing the life they’re working so hard to build.
-    </p>
-
-    <p>
-      If you’re juggling student loans, rising housing costs, childcare expenses,
-      and the pressure to “do everything right,” you’re not alone—and you’re not failing.
-      The system changed. Most financial advice didn’t.
-    </p>
-
-    <div class="highlight">
-      <strong>Our mission:</strong>  
-      To deliver clear, realistic, and judgment-free financial guidance built for real families living in today’s economy.
-    </div>
-
-    <h2>Why Millennial Family Finance Was Created</h2>
-
-    <p>
-      Traditional personal finance advice often assumes stable incomes, low housing costs,
-      and minimal debt. That’s not reality for most millennials raising families today.
-    </p>
-
-    <p>
-      Millennial Family Finance was created to bridge that gap—offering strategies that work
-      in the real world, not just spreadsheets.
-    </p>
-
-    <h2>What You’ll Find Here</h2>
-
-    <div class="values">
-      <div class="value-box">
-        <h3>Practical Budgeting</h3>
-        <p>
-          Systems that adapt to variable incomes, inflation, and family priorities—without guilt or deprivation.
-        </p>
-      </div>
-
-      <div class="value-box">
-        <h3>Debt & Cash Flow Clarity</h3>
-        <p>
-          Straightforward approaches to managing student loans, credit cards, and financial stress.
-        </p>
-      </div>
-
-      <div class="value-box">
-        <h3>Long-Term Wealth Building</h3>
-        <p>
-          Investing and planning guidance designed for families starting later—but thinking smarter.
-        </p>
-      </div>
-
-      <div class="value-box">
-        <h3>Mindset & Sustainability</h3>
-        <p>
-          Money habits that support mental health, relationships, and long-term stability.
-        </p>
-      </div>
-    </div>
-
-    <h2>Our Philosophy</h2>
-
-    <p>
-      We believe financial success isn’t about perfection—it’s about progress, clarity,
-      and building systems you can maintain during busy, unpredictable seasons of life.
-    </p>
-
-    <p>
-      No shame. No hype. No unrealistic promises.
-      Just honest guidance for families who want security, freedom, and peace of mind.
-    </p>
-
-    <h2>Who This Is For</h2>
-
-    <p>
-      Millennial Family Finance is for couples, parents, and individuals who want to make
-      smarter money decisions—without sacrificing joy, time, or values along the way.
-    </p>
-
-    <footer>
-      © 2026 Millennial Family Finance. All rights reserved.
-    </footer>
-  </main>
-</body>
-</html>
 </body>
 </html>
