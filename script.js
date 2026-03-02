@@ -8,13 +8,51 @@ function calculateBudget() {
 }
 
 function calculateMortgage() {
-  const loan = parseFloat(document.getElementById("loanAmount").value) || 0;
-  const rate = parseFloat(document.getElementById("interestRate").value) / 100 / 12 || 0;
-  const years = parseFloat(document.getElementById("loanYears").value) * 12 || 0;
+  const loan = parseFloat(document.getElementById("loanAmount").value);
+  const annualRate = parseFloat(document.getElementById("interestRate").value);
+  const years = parseInt(document.getElementById("loanYears").value);
 
-  const payment = loan * rate / (1 - Math.pow(1 + rate, -years));
+  if (!loan || !annualRate || !years) return;
+
+  const monthlyRate = annualRate / 100 / 12;
+  const totalPayments = years * 12;
+
+  const monthlyPayment =
+    loan * monthlyRate / (1 - Math.pow(1 + monthlyRate, -totalPayments));
+
   document.getElementById("mortgageResults").innerHTML =
-    `<p>Monthly Payment: $${payment.toFixed(2)}</p>`;
+    `<p><strong>Monthly Payment:</strong> $${monthlyPayment.toFixed(2)}</p>`;
+
+  let balance = loan;
+  let table = `
+    <table border="1" cellpadding="6">
+      <tr>
+        <th>Month</th>
+        <th>Payment</th>
+        <th>Principal</th>
+        <th>Interest</th>
+        <th>Balance</th>
+      </tr>
+  `;
+
+  for (let month = 1; month <= totalPayments; month++) {
+    const interest = balance * monthlyRate;
+    const principal = monthlyPayment - interest;
+    balance -= principal;
+
+    table += `
+      <tr>
+        <td>${month}</td>
+        <td>$${monthlyPayment.toFixed(2)}</td>
+        <td>$${principal.toFixed(2)}</td>
+        <td>$${interest.toFixed(2)}</td>
+        <td>$${Math.max(balance, 0).toFixed(2)}</td>
+      </tr>
+    `;
+  }
+
+  table += `</table>`;
+  document.getElementById("amortizationTable").innerHTML = table;
 }
 
 function calculateInvestment() {
@@ -29,5 +67,5 @@ function calculateInvestment() {
   }
 
   document.getElementById("investmentResults").innerHTML =
-    `<p><strong>Estimated Value: $${total.toFixed(2)}</strong></p>`;
+    `<p><strong>Estimated Future Value:</strong> $${total.toFixed(2)}</p>`;
 }
