@@ -44,13 +44,29 @@ function generateAmortization(P, r, n, payment) {
     document.getElementById("amortizationTable").innerHTML = table;
 }
 
+<script>
 function calculateInvestment() {
-    let P = parseFloat(document.getElementById("investmentAmount").value);
-    let r = parseFloat(document.getElementById("annualReturn").value) / 100;
-    let t = parseFloat(document.getElementById("years").value);
+  const principal = parseFloat(document.getElementById("investmentAmount").value) || 0;
+  const monthlyContribution = parseFloat(document.getElementById("monthlyContribution").value) || 0;
+  const annualReturn = parseFloat(document.getElementById("annualReturn").value) || 0;
+  const years = parseFloat(document.getElementById("years").value) || 0;
 
-    let futureValue = P * Math.pow((1 + r), t);
+  const monthlyRate = annualReturn / 100 / 12;
+  const totalMonths = years * 12;
 
-    document.getElementById("investmentResults").innerHTML =
-        `Future Value: $${futureValue.toFixed(2)}`;
+  let futureValue = principal;
+
+  for (let i = 0; i < totalMonths; i++) {
+    futureValue = (futureValue + monthlyContribution) * (1 + monthlyRate);
+  }
+
+  document.getElementById("investmentResults").innerHTML = `
+    <h3>Estimated Future Value</h3>
+    <p><strong>$${futureValue.toLocaleString(undefined, {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    })}</strong></p>
+    <p><em>Based on monthly contributions and compound growth.</em></p>
+  `;
 }
+</script>
